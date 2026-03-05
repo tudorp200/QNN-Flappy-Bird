@@ -12,7 +12,7 @@ This repository contains a PyTorch implementation of a **Dueling Double Deep Q-N
 
 ## Neural Network Architecture
 
-![Architecture](arhitecture.png)
+![Architecture](images/arhitecture.png)
 
 While the reference image above shows a standard DQN, this codebase implements a **Dueling DQN**. The convolutional base matches the image perfectly, but the fully connected layers are split into two streams.
 
@@ -36,7 +36,7 @@ $$Q(s, a) = V(s) + \left( A(s, a) - \frac{1}{|\mathcal{A}|}\sum_{a'} A(s, a') \r
 
 ## Observation Preprocessing
 
-![Preprocessing](preprocessing.png)
+![Preprocessing](images/preprocessing.png)
 
 The agent does not learn from the raw 288x512 color images. To optimize training speed and memory usage, the `EnvProcessor` wrapper applies the following transformations:
 
